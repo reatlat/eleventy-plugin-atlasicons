@@ -16,10 +16,10 @@ npm install eleventy-plugin-atlasicons --save-dev
 Add it to your [Eleventy Config](https://www.11ty.dev/docs/config/) file:
 
 ```js
-const eleventyPluginPhosphoricons = require('eleventy-plugin-atlasicons');
+const eleventyPluginAtlasicons = require('eleventy-plugin-atlasicons');
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPlugin(eleventyPluginPhosphoricons);
+    eleventyConfig.addPlugin(eleventyPluginAtlasicons);
 };
 ```
 
@@ -27,10 +27,10 @@ module.exports = function (eleventyConfig) {
 Advanced usage:
 
 ```js
-const eleventyPluginPhosphoricons = require('eleventy-plugin-atlasicons');
+const eleventyPluginAtlasicons = require('eleventy-plugin-atlasicons');
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPlugin(eleventyPluginPhosphoricons, {
+    eleventyConfig.addPlugin(eleventyPluginAtlasicons, {
         class: `atlas-icon`,
         category: 'unknown',
         size: 24,
