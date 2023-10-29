@@ -7,6 +7,7 @@ module.exports = (eleventyConfig, attributes = {}) => {
 
     const defaultAttributes = {
         class: `atlas-icon`,
+        style: false,
         category: 'unknown',
         size: 24,
         weight: 'regular', // thin, light, regular, medium, bold
@@ -136,6 +137,7 @@ module.exports = (eleventyConfig, attributes = {}) => {
 
         // cleanup SVG
         $(`[id]`).removeAttr(`id`);
+        $(`[class]`).removeAttr(`class`);
         $(`[data-name]`).removeAttr(`data-name`);
         $(`[stroke]`).attr(`stroke`, attributes.color);
         $(`[fill]:not([fill="none"])`).attr(`fill`, attributes.color);

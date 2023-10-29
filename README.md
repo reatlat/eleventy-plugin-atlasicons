@@ -32,6 +32,7 @@ const eleventyPluginAtlasicons = require('eleventy-plugin-atlasicons');
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyPluginAtlasicons, {
         class: `atlas-icon`,
+        style: `display: inline-block;`,
         category: 'unknown',
         size: 24,
         weight: 'regular', // thin, light, regular, medium, bold
