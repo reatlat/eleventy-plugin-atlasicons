@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.91" height="22.91" viewBox="0 0 22.91 22.91">
+  <g id="paper-star" transform="translate(-0.545 -0.545)">
+    <path id="Path_13" data-name="Path 13" d="M12,6.27l.6,1.26,1.35.2-.98.98.23,1.38L12,9.44l-1.2.65.23-1.38-.98-.98,1.35-.2Z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <path id="Path_14" data-name="Path 14" d="M20.59,1.5h0A1.91,1.91,0,0,1,22.5,3.41V5.32H18.68V3.41A1.91,1.91,0,0,1,20.59,1.5Z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <path id="Path_15" data-name="Path 15" d="M14.86,18.68H1.5v1.91A1.9,1.9,0,0,0,3.41,22.5H16.77a1.91,1.91,0,0,1-1.91-1.91Z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <path id="Path_16" data-name="Path 16" d="M5.32,18.68V3.41A1.9,1.9,0,0,1,7.23,1.5H20.59a1.91,1.91,0,0,0-1.91,1.91V20.59a1.9,1.9,0,0,1-1.91,1.91h0" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <line id="Line_10" data-name="Line 10" x2="7.64" transform="translate(8.18 14.86)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+  </g>
+</svg>

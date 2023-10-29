@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.18" height="22.918" viewBox="0 0 22.18 22.918">
+  <g id="shield-star-banner" transform="translate(-0.918 -0.537)">
+    <path id="Path_19" data-name="Path 19" d="M12,6.27l.6,1.26,1.35.2-.98.98.23,1.38L12,9.44l-1.2.65.23-1.38-.98-.98,1.35-.2Z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <path id="Path_20" data-name="Path 20" d="M16.77,16.77h4.78l-.96,1.91.96,1.91H16.77Z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <path id="Path_21" data-name="Path 21" d="M7.23,16.77H2.46l.95,1.91-.95,1.91H7.23Z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="9.55" height="3.82" transform="translate(16.77 22.5) rotate(180)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <path id="Path_22" data-name="Path 22" d="M12,16.77h0a9.83,9.83,0,0,1-6.68-9V2.35L12,1.5l6.68.85V7.77A9.83,9.83,0,0,1,12,16.77Z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+  </g>
+</svg>

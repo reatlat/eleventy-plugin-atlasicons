@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.91" height="19.09" viewBox="0 0 22.91 19.09">
+  <g id="crown-winner" transform="translate(-0.545 -2.455)">
+    <line id="Line_1" data-name="Line 1" x2="19.1" transform="translate(2.45 20.59)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <path id="Path_1" data-name="Path 1" d="M2.46,7.23l1.9,6.68v6.68H19.64V13.91l1.91-6.68" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <path id="Path_2" data-name="Path 2" d="M21.55,7.23l-5.73,2.86L12,5.32" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <path id="Path_3" data-name="Path 3" d="M12,5.32,8.18,10.09,2.46,7.23" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="1.91" cy="2.86" rx="1.91" ry="2.86" transform="translate(10.09 12)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <line id="Line_2" data-name="Line 2" x2="3.82" transform="translate(15.82 14.86)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <line id="Line_3" data-name="Line 3" x1="3.82" transform="translate(4.36 14.86)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="0.95" cy="0.95" r="0.95" transform="translate(11.05 3.41)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <circle id="Ellipse_3" data-name="Ellipse 3" cx="0.95" cy="0.95" r="0.95" transform="translate(1.5 5.32)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <circle id="Ellipse_4" data-name="Ellipse 4" cx="0.95" cy="0.95" r="0.95" transform="translate(20.6 5.32)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+  </g>
+</svg>

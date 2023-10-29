@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22.976" height="22.91" viewBox="0 0 22.976 22.91">
+  <g id="star-trophy-achievement" transform="translate(-0.512 -0.545)">
+    <path id="Path_45" data-name="Path 45" d="M12,8.18l.46.94,1.05.16-.76.73.18,1.03L12,10.56l-.93.48.18-1.03-.76-.73,1.05-.16Z" fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1.91"/>
+    <path id="Path_46" data-name="Path 46" d="M17.73,22.5c-3.82,0-5.73-1.91-5.73-3.82s5.73-3.82,5.73-7.63S15.82,1.5,15.82,1.5H8.18S6.27,7.23,6.27,11.05,12,16.77,12,18.68,10.09,22.5,6.27,22.5" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <line id="Line_22" data-name="Line 22" x2="11.46" transform="translate(6.27 22.5)" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <path id="Path_47" data-name="Path 47" d="M16.77,4.36a3.54,3.54,0,0,1,2.87-1.91A2.53,2.53,0,0,1,22.5,5.32c0,1.91-4.77,3.48-4.77,5.73A1.87,1.87,0,0,0,19.64,13" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+    <path id="Path_48" data-name="Path 48" d="M7.23,4.36A3.54,3.54,0,0,0,4.36,2.45,2.53,2.53,0,0,0,1.5,5.32c0,1.91,4.77,3.48,4.77,5.73A1.87,1.87,0,0,1,4.36,13" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.91"/>
+  </g>
+</svg>
