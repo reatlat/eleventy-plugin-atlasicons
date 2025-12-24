@@ -5,6 +5,8 @@
 
 An Eleventy [shortcode](https://www.11ty.dev/docs/shortcodes/), allows [Atlas icons](https://atlasicons.vectopus.com/) to be embedded as inline svg into templates.
 
+**[Live Demo](https://eleventy-plugin-atlasicons.netlify.app/)** | [Atlas Icons](https://atlasicons.vectopus.com/)
+
 ## Installation
 Install the plugin from [npm](https://www.npmjs.com/package/eleventy-plugin-atlasicons):
 
@@ -113,3 +115,7 @@ The icons were created by Ramy Wafaa and are available under the [MIT license](I
 
 ## License
 The code is available under the [MIT license](LICENSE).
+
+---
+
+Crafted by [Alex Zappa](https://alex.zappa.dev/) at [FreshJuice](https://freshjuice.dev/)
