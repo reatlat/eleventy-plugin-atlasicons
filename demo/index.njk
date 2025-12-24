@@ -4,50 +4,202 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>11ty Plugin Atlas Icons - Demo</title>
-    <link rel="stylesheet"
-          href="https://unpkg.com/purecss@2.1.0/build/pure-min.css"
-          integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH"
-          crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>11ty Plugin Atlas Icons</title>
+    <meta name="description" content="Open source free icons library, available in variable stroke SVG format for Eleventy projects.">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
     <style>
-        body {
-            background: #fafafa;
+        .github-fork-ribbon:before { background-color: #333; }
+        .prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::before,
+        .prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *))::after { content: none !important; }
+        .prose :where(code):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+            background-color: #f5f2f0;
+            padding: 0.05em 0.4em;
+            line-height: 1;
+            font-size: inherit !important;
+            border-radius: 0.2em;
+            border: 1px solid #e1e1e1;
+            display: inline !important;
+            font-family: 'Fira Code', 'Courier New', monospace;
         }
-        .page-wrapper {
-            background: #fff;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,.15);
+        .prose {
+            --tw-prose-body: #111 !important;
         }
-        .atlas-icon {
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,.15);
+        .icon-card {
+            transition: all 0.2s ease;
+        }
+        .icon-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .icon-card:active {
+            transform: translateY(0);
+        }
+        .icon-name {
+            font-size: 10px;
+            word-break: break-all;
+        }
+        .copied-toast {
+            animation: fadeInOut 1.5s ease;
+        }
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translateY(10px); }
+            20% { opacity: 1; transform: translateY(0); }
+            80% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-10px); }
         }
     </style>
 </head>
-<body>
-    <div class="page page-wrapper">
+<body class="py-14 px-8 bg-gray-50">
+<div class="prose mx-auto max-w-6xl">
+    <h1 class="!mb-0">11ty Plugin: Atlas Icons</h1>
+    <p class="mt-4 flex flex-wrap gap-2">
+        <a href="https://npmjs.com/package/eleventy-plugin-atlasicons">
+            <span class="sr-only">npm</span>
+            <img class="inline-block !my-0" src="https://img.shields.io/npm/v/eleventy-plugin-atlasicons.svg" alt="npm">
+        </a>
+        <a href="https://npmjs.com/package/eleventy-plugin-atlasicons">
+            <span class="sr-only">npm</span>
+            <img class="inline-block !my-0" src="https://img.shields.io/npm/dt/eleventy-plugin-atlasicons.svg" alt="npm">
+        </a>
+        <a href="https://npmjs.com/package/eleventy-plugin-atlasicons">
+            <span class="sr-only">license</span>
+            <img class="inline-block !my-0" src="https://img.shields.io/npm/l/eleventy-plugin-atlasicons.svg" alt="license">
+        </a>
+    </p>
+    <p><a href="https://www.npmjs.com/package/eleventy-plugin-atlasicons">This plugin</a> adds a shortcode to your Eleventy project to easily include icons from the <a href="https://atlasicons.vectopus.com/">Atlas Icons</a> collection.</p>
+    <p>Browse the full icon collection at <a href="https://atlasicons.vectopus.com/">atlasicons.vectopus.com</a></p>
 
-        <div class="content-wrapper">
-            <div class="content">
-                <div class="pure-g">
-                    <div class="pure-u-1-1">
-                        <h1>Atlas icons</h1>
-                        <p>Open source free icons library, available in variable stroke SVG format, web font, Figma, React, Vue, Flutter and Eleventy ready to use packages.</p>
-                    </div>
+    <h2>Installation</h2>
+    <p>Install the plugin from npm:</p>
+    <pre><code>npm install eleventy-plugin-atlasicons --save-dev</code></pre>
 
-                    <div class="pure-u-1-1">
-                        {% for icon in icons %}
-                            {% atlas icon %}
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
+    <h2>Configuration</h2>
+    <ul>
+        <li><code>class</code> - The class attribute to be added to the svg element.<br/><small>Default: <code>atlas-icon</code></small></li>
+        <li><code>style</code> - The style attribute to be added to the svg element.<br/><small>Default: <code>undefined</code></small></li>
+        <li><code>size</code> - The width and height attribute to be added to the svg element.<br/><small>Default: <code>24</code></small></li>
+        <li><code>color</code> - The stroke/fill color to be applied.<br/><small>Default: <code>currentColor</code></small></li>
+        <li><code>weight</code> - The stroke weight variant.<br/><small>Default: <code>regular</code>, options: <code>thin</code>, <code>light</code>, <code>regular</code>, <code>medium</code>, <code>bold</code></small></li>
+        <li><code>strokeWidth</code> - Override the stroke width directly.<br/><small>Default: based on weight</small></li>
+        <li><code>category</code> - The icon category.<br/><small>Default: <code>unknown</code> (auto-detected)</small></li>
+        <li><code>dataIconAttributes</code> - Add data attributes for icon name and category.<br/><small>Default: <code>false</code></small></li>
+        <li><code>debug</code> - Enable debug mode (same as dataIconAttributes).<br/><small>Default: <code>false</code></small></li>
+    </ul>
+
+    <h2>Usage</h2>
+    <p>Add it to your <a href="https://www.11ty.dev/docs/config/">Eleventy Config</a> config file:</p>
+    <h3>ESM (recommended):</h3>
+    <pre><code>import eleventyPluginAtlasicons from 'eleventy-plugin-atlasicons';
+
+export default function (eleventyConfig) {
+    eleventyConfig.addPlugin(eleventyPluginAtlasicons);
+};</code></pre>
+    <h3>CommonJS:</h3>
+    <pre><code>const eleventyPluginAtlasicons = require('eleventy-plugin-atlasicons');
+
+module.exports = function (eleventyConfig) {
+    eleventyConfig.addPlugin(eleventyPluginAtlasicons);
+};</code></pre>
+    <h3>Advanced usage:</h3>
+    <pre><code>import eleventyPluginAtlasicons from 'eleventy-plugin-atlasicons';
+
+export default function (eleventyConfig) {
+    eleventyConfig.addPlugin(eleventyPluginAtlasicons, {
+        class: "atlas-icon",
+        style: "vertical-align: middle;",
+        size: 32,
+        color: "currentColor",
+        weight: "regular"
+    });
+};</code></pre>
+
+    <h2>Demo</h2>
+
+    <h3>Weight Variants</h3>
+    <div class="flex flex-wrap gap-4 items-end not-prose mb-8">
+        <div class="text-center bg-white rounded-lg p-4 shadow-sm">
+            <p class="text-xs text-gray-500 mb-2">thin</p>
+            {% atlas "like-thumbs-up-sticker", { weight: "thin", size: 48 } %}
         </div>
-
+        <div class="text-center bg-white rounded-lg p-4 shadow-sm">
+            <p class="text-xs text-gray-500 mb-2">light</p>
+            {% atlas "like-thumbs-up-sticker", { weight: "light", size: 48 } %}
+        </div>
+        <div class="text-center bg-white rounded-lg p-4 shadow-sm">
+            <p class="text-xs text-gray-500 mb-2">regular</p>
+            {% atlas "like-thumbs-up-sticker", { weight: "regular", size: 48 } %}
+        </div>
+        <div class="text-center bg-white rounded-lg p-4 shadow-sm">
+            <p class="text-xs text-gray-500 mb-2">medium</p>
+            {% atlas "like-thumbs-up-sticker", { weight: "medium", size: 48 } %}
+        </div>
+        <div class="text-center bg-white rounded-lg p-4 shadow-sm">
+            <p class="text-xs text-gray-500 mb-2">bold</p>
+            {% atlas "like-thumbs-up-sticker", { weight: "bold", size: 48 } %}
+        </div>
     </div>
+
+    <h3>Custom Colors</h3>
+    <div class="flex flex-wrap gap-4 items-center not-prose mb-8">
+        <div class="bg-white rounded-lg p-4 shadow-sm">{% atlas "paper-star", { color: "#ef4444", size: 48 } %}</div>
+        <div class="bg-white rounded-lg p-4 shadow-sm">{% atlas "paper-star", { color: "#f97316", size: 48 } %}</div>
+        <div class="bg-white rounded-lg p-4 shadow-sm">{% atlas "paper-star", { color: "#eab308", size: 48 } %}</div>
+        <div class="bg-white rounded-lg p-4 shadow-sm">{% atlas "paper-star", { color: "#22c55e", size: 48 } %}</div>
+        <div class="bg-white rounded-lg p-4 shadow-sm">{% atlas "paper-star", { color: "#3b82f6", size: 48 } %}</div>
+        <div class="bg-white rounded-lg p-4 shadow-sm">{% atlas "paper-star", { color: "#a855f7", size: 48 } %}</div>
+    </div>
+
+    <h3>All Icons ({{ icons.length }} icons)</h3>
+    <p class="text-sm text-gray-600">Click on any icon card to copy its name to clipboard.</p>
+</div>
+
+<div class="max-w-6xl mx-auto mt-6">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3">
+        {% for icon in icons %}
+        <div class="icon-card bg-white rounded-lg p-3 shadow-sm cursor-pointer flex flex-col items-center justify-center hover:bg-blue-50 border border-transparent hover:border-blue-200" onclick="copyIconName('{{ icon }}')" title="Click to copy: {{ icon }}">
+            <div class="mb-2">
+                {% atlas icon, { size: 32, color: "#374151" } %}
+            </div>
+            <span class="icon-name text-gray-600 text-center leading-tight">{{ icon }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="prose mx-auto max-w-6xl mt-12">
+    <h2>License</h2>
+    <p>The icons are from <a href="https://atlasicons.vectopus.com/">Atlas Icons</a> by Ramy Wafaa and are available under the <a href="https://github.com/reatlat/eleventy-plugin-atlasicons/blob/main/ICONS-LICENSE">MIT license</a>.</p>
+    <p>The plugin code is available under the <a href="https://github.com/reatlat/eleventy-plugin-atlasicons/blob/main/LICENSE">MIT license</a>.</p>
+    <hr>
+    <footer>
+        <p>Built using <a href="https://11ty.dev?utm_source=eleventy-plugin-atlasicons">{{ eleventy.generator }}</a>.</p>
+        <p>Crafted by <a href="https://alex.zappa.dev?utm_source=eleventy-plugin-atlasicons">Alex Zappa</a>.</p>
+    </footer>
+</div>
+
+<div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg shadow-lg hidden">
+    Copied!
+</div>
+
+<a class="github-fork-ribbon fixed" href="https://github.com/reatlat/eleventy-plugin-atlasicons/" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+
+<script>
+function copyIconName(name) {
+    navigator.clipboard.writeText(name).then(() => {
+        const toast = document.getElementById('toast');
+        toast.textContent = `Copied: ${name}`;
+        toast.classList.remove('hidden');
+        toast.classList.add('copied-toast');
+        setTimeout(() => {
+            toast.classList.add('hidden');
+            toast.classList.remove('copied-toast');
+        }, 1500);
+    });
+}
+</script>
+
 </body>
 </html>

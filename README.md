@@ -15,6 +15,16 @@ npm install eleventy-plugin-atlasicons --save-dev
 
 Add it to your [Eleventy Config](https://www.11ty.dev/docs/config/) file:
 
+**ESM (recommended):**
+```js
+import eleventyPluginAtlasicons from 'eleventy-plugin-atlasicons';
+
+export default function (eleventyConfig) {
+    eleventyConfig.addPlugin(eleventyPluginAtlasicons);
+};
+```
+
+**CommonJS:**
 ```js
 const eleventyPluginAtlasicons = require('eleventy-plugin-atlasicons');
 
@@ -27,9 +37,9 @@ module.exports = function (eleventyConfig) {
 Advanced usage:
 
 ```js
-const eleventyPluginAtlasicons = require('eleventy-plugin-atlasicons');
+import eleventyPluginAtlasicons from 'eleventy-plugin-atlasicons';
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyPluginAtlasicons, {
         class: `atlas-icon`,
         style: `display: inline-block;`,
@@ -52,7 +62,7 @@ The plugin turns [11ty shortcodes](https://www.11ty.dev/docs/shortcodes/) like t
 {% atlas "like-thumbs-up-sticker" %}
 ```
 
-or 
+or
 
 ```nunjucks
 {% atlasicon "like-thumbs-up-sticker" %}
@@ -74,11 +84,17 @@ into HTML code like this:
 ## Custom Usage
 
 ```nunjucks
-{% atlas "like-thumbs-up-sticker", { 
+{% atlas "like-thumbs-up-sticker", {
     size: 64,
     class: "atlas-icon bg-currentColor",
     dataIconAttributes: true
 } %}
+```
+
+You can also pass a string as the second argument for extra classes (useful in Liquid templates):
+
+```liquid
+{% atlas "like-thumbs-up-sticker" "extra-class another-class" %}
 ```
 
 

@@ -1,12 +1,10 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { parseHTML } from 'linkedom';
+const fs = require('fs');
+const path = require('path');
+const { parseHTML } = require('linkedom');
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const atlasIcons = JSON.parse(fs.readFileSync(path.join(__dirname, 'icons.json'), 'utf8'));
 
-export default (eleventyConfig, attributes = {}) => {
+module.exports = (eleventyConfig, attributes = {}) => {
 
     const defaultAttributes = {
         class: `atlas-icon`,

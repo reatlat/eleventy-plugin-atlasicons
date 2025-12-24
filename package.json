@@ -1,13 +1,21 @@
 {
   "name": "eleventy-plugin-atlasicons",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "A flexible icon family for interfaces, diagrams, presentations — whatever, really.",
-  "main": ".eleventy.js",
+  "type": "module",
+  "main": ".eleventy.cjs",
+  "module": ".eleventy.js",
+  "exports": {
+    ".": {
+      "import": "./.eleventy.js",
+      "require": "./.eleventy.cjs"
+    }
+  },
   "scripts": {
     "update:icons.json": "node ./fetchIconsLib.js",
     "build": "npx eleventy --config=./demo/.eleventy.js --input=./demo --output=./_site",
     "dev": "npx eleventy --serve --config=./demo/.eleventy.js --input=./demo --output=./_site",
-    "test": "npx eleventy --config=./demo/.eleventy.js --input=./demo --output=./_site "
+    "test": "npx eleventy --config=./demo/.eleventy.js --input=./demo --output=./_site"
   },
   "repository": {
     "type": "git",
@@ -33,7 +41,12 @@
   },
   "homepage": "https://github.com/reatlat/eleventy-plugin-atlasicons#readme",
   "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "cheerio": "^1.0.0-rc.12"
+    "linkedom": "^0.18.12"
+  },
+  "peerDependencies": {
+    "@11ty/eleventy": ">=2.0.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
   }
 }

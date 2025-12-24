@@ -1,0 +1,77 @@
+---
+permalink: /test-liquid/index.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Liquid Test - 11ty Plugin Atlas Icons</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="py-14 px-8">
+<div class="max-w-3xl mx-auto">
+    <h1 class="text-2xl font-bold mb-8">Liquid Template Test</h1>
+
+    <h2 class="text-xl font-semibold mt-8 mb-4">Basic Usage</h2>
+    <div class="flex flex-wrap gap-4 items-center">
+        <div>
+            <p class="text-sm text-gray-500 mb-1">Like:</p>
+            {% atlas "like-thumbs-up-sticker" %}
+        </div>
+        <div>
+            <p class="text-sm text-gray-500 mb-1">Star:</p>
+            {% atlas "paper-star" %}
+        </div>
+        <div>
+            <p class="text-sm text-gray-500 mb-1">Check:</p>
+            {% atlas "check-circle" %}
+        </div>
+    </div>
+
+    <h2 class="text-xl font-semibold mt-8 mb-4">With Extra Classes</h2>
+    <p class="text-sm text-gray-500 mb-4">Liquid syntax: <code>{% raw %}{% atlas "icon" "extra-classes" %}{% endraw %}</code></p>
+    <div class="flex flex-wrap gap-4 items-center">
+        <div>
+            <p class="text-sm text-gray-500 mb-1">Single class:</p>
+            {% atlas "paper-star" "text-yellow-500" %}
+        </div>
+        <div>
+            <p class="text-sm text-gray-500 mb-1">Multiple classes:</p>
+            {% atlas "arrow-right" "text-orange-500 drop-shadow-lg" %}
+        </div>
+        <div>
+            <p class="text-sm text-gray-500 mb-1">Tailwind hover:</p>
+            {% atlas "bookmark-star" "text-red-500 hover:text-red-700 transition-colors cursor-pointer" %}
+        </div>
+    </div>
+
+    <h2 class="text-xl font-semibold mt-8 mb-4">Using atlasicon Shortcode</h2>
+    <div class="flex flex-wrap gap-4 items-center">
+        <div class="text-center">
+            <p class="text-sm text-gray-500 mb-1">home</p>
+            {% atlasicon "home" %}
+        </div>
+        <div class="text-center">
+            <p class="text-sm text-gray-500 mb-1">crown-winner</p>
+            {% atlasicon "crown-winner" %}
+        </div>
+        <div class="text-center">
+            <p class="text-sm text-gray-500 mb-1">trophy-star-reward</p>
+            {% atlasicon "trophy-star-reward" %}
+        </div>
+        <div class="text-center">
+            <p class="text-sm text-gray-500 mb-1">winner-trophy</p>
+            {% atlasicon "winner-trophy" %}
+        </div>
+        <div class="text-center">
+            <p class="text-sm text-gray-500 mb-1">medal-badge-award</p>
+            {% atlasicon "medal-badge-award" %}
+        </div>
+    </div>
+
+    <hr class="my-8">
+    <p class="text-sm text-gray-500">Built with {{ eleventy.generator }}</p>
+</div>
+</body>
+</html>

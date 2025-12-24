@@ -1,6 +1,6 @@
-const eleventyPluginAtlasicons = require("../.eleventy.js");
+import eleventyPluginAtlasicons from "../.eleventy.js";
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyPluginAtlasicons, {
         size: 24,
         debug: true,
